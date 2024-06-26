@@ -1,0 +1,183 @@
+/* VISTA MOVIL */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.titulo-crearTarjeta {
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: rgb(105, 102, 102);
+}
+
+.titulo-subtitulo h1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 8px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.titulo-subtitulo p {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.formulario form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 8px;
+}
+
+.formulario label {
+    font-size: 14px;
+    color: white;
+    margin-top: 10px;
+
+}
+
+.formulario input,
+select {
+    margin-top: 2px;
+}
+
+.formulario input[type="text"],
+.formulario select {
+    padding: 5px;
+    font-size: 12px;
+    border: 1px solid rgb(105, 102, 102);
+    border-radius: 5px;
+    background-color: rgb(20, 20, 20);
+    transition: border-color 0.3s;
+    color: darkgrey;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.tiempo {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.formulario input[type="text"]:focus,
+.formulario select:focus,
+.formulario .tiempo:focus {
+    border-color: #2271D1;
+    outline: none;
+}
+/* 
+.formulario .tiempo {
+    resize: vertical;
+} */
+
+.formulario button {
+    border: 1px solid white;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px;
+    width: 100px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.formulario button:hover {
+    border: 1px solid #2271D1;
+}
+
+.formulario .button-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+@media screen and (min-width: 768px) {
+
+
+    .titulo-crearTarjeta {
+        font-size: 25px;
+    }
+
+    .titulo-subtitulo h1 {
+        margin-top: 32px;
+        font-size: 32px;
+    }
+
+    .titulo-subtitulo p {
+        margin-top: 16px;
+        font-size: 16px;
+    }
+
+    .formulario form {
+        margin: 16px 0 32px;
+    }
+
+    .formulario .tiempo {
+        margin-top: 13px;
+    }
+
+    .formulario label {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .formulario input,
+    select {
+        margin-top: 8px;
+    }
+
+    .formulario input[type="text"],
+    .formulario select {
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid rgb(105, 102, 102);
+        border-radius: 8px;
+    }
+
+    .formulario button {
+        padding: 8px;
+        width: 120px;
+    }
+
+    .formulario .button-container {
+        margin-top: 15px;
+    }
+
+    .horizontal-fields {
+        display: flex;
+        gap: 15px;
+    }
+
+    .horizontal-fields>div {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* VISTA TABLET */
+@media screen and (min-width: 1024px) {
+
+    .formulario label {
+        font-size: 20px;
+    }
+
+    .titulo-subtitulo p {
+        font-size: 20px;
+    }
+}

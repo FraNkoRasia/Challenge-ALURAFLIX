@@ -1,0 +1,163 @@
+/* HEADER */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: #000000;
+    box-shadow: 0px 5px 30px 3px #2271D1B2;
+    border-bottom: 2px solid #2271D1;
+    position: relative;
+    z-index: 1;
+}
+
+.nav img {
+    width: 120px;
+    transition: transform 0.4s ease;
+    filter: drop-shadow(5px 5px 20px rgba(0, 0, 254, 0.9));
+    margin-right: 16px;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.ul-links a {
+    padding: 0 3px;
+}
+
+.ul-links {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 1rem;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.ul-links li {
+    font-size: 22px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 1.6px;
+    box-shadow: 0px 5px 30px 3px #2271D1B2;
+}
+
+.ul-links li:hover {
+    color: #2271D1;
+    border: 1px solid #2271D1;
+    box-shadow: 0px 0px 3px 3px #2271D1B2 inset;
+}
+
+.icon-home {
+    display: inline-block;
+    border: none;
+}
+
+.text-home {
+    display: none;
+}
+
+.icon-search {
+    display: inline-block;
+    border: none;
+}
+
+.text-buscar {
+    display: none;
+}
+
+.lupa {
+    display: flex;
+    gap: 5px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 12px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #161515;
+    transition: width 0.3s ease;
+    font-weight: 600;
+}
+
+.search-input::placeholder {
+    color: #ffffff transparent;
+    font-weight: normal;
+}
+
+.baner {
+    width: 100%;
+    box-shadow: 0px 5px 30px 3px #2271D1B2;
+    border-bottom: 2px solid #2271D1;
+}
+
+/* VISTA TABLET */
+@media screen and (min-width: 768px) {
+
+    /* HEADER */
+    .nav {
+        border-bottom: 3px solid #2271D1;
+        padding: 19.2px;
+    }
+
+    .nav img {
+        width: 160px;
+    }
+
+    .ul-links .lupa {
+        padding: 5px;
+    }
+
+    .ul-links li {
+        font-size:19.2px;
+        padding: 6px;
+    }
+
+    .ul-links a {
+        padding: 0 16px;
+    }
+
+    .icon-home {
+        display: none;
+    }
+
+    .text-home {
+        display: inline;
+    }
+}
+
+/* VISTA DESKTOP */
+@media screen and (min-width: 1024px) {
+
+    /* HEADER */
+    .nav {
+        border-bottom: 4px solid #2271D1;
+        padding: 24px;
+    }
+
+    .nav img {
+        width: 200px;
+    }
+
+    .ul-links li {
+        font-size: 24px;
+    }
+
+    .search-input {
+        width: 200px;
+        font-size: 20px;
+    }
+
+}

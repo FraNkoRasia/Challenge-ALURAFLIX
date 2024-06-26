@@ -1,0 +1,148 @@
+{
+  "peliculas": [
+    {
+      "id": "1",
+      "titulo": "Amigos imaginarios",
+      "imagen": "https://es.web.img3.acsta.net/img/7b/21/7b214d9219ddd473eb8e1e844408b0f8.jpeg",
+      "video": "https://youtu.be/_DTnvFdFW14?si=U7NOqj9vHEVWU4X-",
+      "cartelera": "ANIME",
+      "tiempo": "1h 13min"
+    },
+    {
+      "id": "2",
+      "titulo": "Intensamente",
+      "imagen": "https://cl2.buscafs.com/www.tomatazos.com/public/uploads/images/440141/440141.jpg",
+      "video": "https://youtu.be/xiC2iXTXHxw?si=j5XTW12Ap1b0JT-r",
+      "cartelera": "ANIME",
+      "tiempo": "1h 27min"
+    },
+    {
+      "id": "3",
+      "titulo": "Mi villano Favorito 4",
+      "imagen": "https://www.americatv.com.pe/cinescape/wp-content/uploads/2023/12/cihfEI1cwTORZ9W0nDPgxiVCoiZ-scaled.jpg",
+      "video": "https://youtu.be/I0_qFoptZ4Y?si=mb0DugeJo8mW-7DA",
+      "cartelera": "ANIME",
+      "tiempo": "1h 19min"
+    },
+    {
+      "id": "4",
+      "titulo": "Zootopia",
+      "imagen": "https://i.pinimg.com/originals/b7/b1/48/b7b1481a124a07babe533388d0521caa.jpg",
+      "video": "https://youtu.be/mgT4f8_xq7I?si=VPwA2nAwpzCQbuSZ",
+      "cartelera": "ANIME",
+      "tiempo": "1h 32min"
+    },
+    {
+      "id": "5",
+      "titulo": "Los Croods",
+      "imagen": "https://s.yimg.com/ny/api/res/1.2/._shnPr1l9fnKBFybNJqXA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTg1Mw--/https://s.yimg.com/uu/api/res/1.2/m96hWy0OB.1mzQeZHcNWrA--~B/aD04MDA7dz02MDA7YXBwaWQ9eXRhY2h5b24-/http://l.yimg.com/os/publish-images/omg/2013-03-06/169dc62c-fdcb-4810-82a4-8b476a8197d5_RespaldosColectivos_30x40_TODOS.jpg",
+      "video": "https://youtu.be/tplddmYEgMM?si=OYvQfhVlCHoohse0",
+      "cartelera": "ANIME",
+      "tiempo": "1h 34min"
+    },
+    {
+      "id": "6",
+      "titulo": "Soul",
+      "imagen": "https://lumiere-a.akamaihd.net/v1/images/image_7e96a17e.jpeg?region=0%2C0%2C540%2C810",
+      "video": "https://youtu.be/NloXY1WRSQw?si=PdxxysaY9rR2bcHK",
+      "cartelera": "ANIME",
+      "tiempo": "1h 14min"
+    },
+    {
+      "id": "7",
+      "titulo": "Atlas 2024",
+      "imagen": "https://es.web.img3.acsta.net/pictures/24/03/13/17/53/3089446.jpg",
+      "video": "https://youtu.be/vC2oN32ol0w?si=3sF7qUp9wggEyDfJ",
+      "cartelera": "CIENCIA FICCION",
+      "tiempo": "1h 31min"
+    },
+    {
+      "id": "8",
+      "titulo": "El Planeta de los Simiosssssssssssssssssss",
+      "imagen": "https://static.cinepolis.com/resources/mx/movies/posters/414x603/45834-312386-20240508042909.jpg",
+      "video": "https://youtu.be/raYE6Ild7a4?si=2mATjdEydvdFOinM",
+      "cartelera": "CIENCIA FICCION",
+      "tiempo": "1h 47min"
+    },
+    {
+      "id": "9",
+      "titulo": "Damsel",
+      "imagen": "https://es.web.img3.acsta.net/c_310_420/pictures/24/03/06/16/05/5342408.jpg",
+      "video": "https://youtu.be/tzRisTkuLWA?si=lR_2wSurVkhZSYQC",
+      "cartelera": "CIENCIA FICCION",
+      "tiempo": "1h 47min"
+    },
+    {
+      "id": "10",
+      "titulo": "Flash",
+      "imagen": "https://es.web.img3.acsta.net/pictures/14/05/05/12/46/010208.jpg",
+      "video": "https://youtu.be/zzBIzYmxatU?si=BTC_4xrByDnewkZs",
+      "cartelera": "CIENCIA FICCION",
+      "tiempo": "1h 22min"
+    },
+    {
+      "id": "11",
+      "titulo": "Black Adam",
+      "imagen": "https://cinefreaks.net/2023/wp-content/uploads/2022/10/Black-Adam-No-alcanza-ni-con-La-Roca-mas-dura-02.jpeg",
+      "video": "https://youtu.be/a1mcS4tKGNg?si=6TJaZiyfmE9vpTyu",
+      "cartelera": "CIENCIA FICCION",
+      "tiempo": "1h 29min"
+    },
+    {
+      "id": "11",
+      "titulo": "Flash",
+      "imagen": "https://www.uniminutoradio.com.co/wp-content/uploads/2023/06/TheFlash-TheFash-Poster.png",
+      "video": "https://youtu.be/vq-8aIZZZUQ?si=lEFr6nJCe7krE84D",
+      "cartelera": "CIENCIA FICCION",
+      "tiempo": "1h 22min"
+    },
+    {
+      "id": "12",
+      "titulo": "6 En la Sombra",
+      "imagen": "https://es.web.img3.acsta.net/pictures/19/11/14/15/48/4049173.jpg",
+      "video": "https://youtu.be/RyupOE9u22k?si=NxovC5iXQiDBNdFk",
+      "cartelera": "ACCION",
+      "tiempo": "1h 41min"
+    },
+    {
+      "id": "13",
+      "titulo": "Samurai X",
+      "imagen": "https://play-lh.googleusercontent.com/otoeWtoX2Q0jrxWiBt-LH-WeXodUVZK8eywjSwTSjNBtI-N8SGawl8GisXbT0w0amiA",
+      "video": "https://youtu.be/xXtG2Ck526U?si=VxdS6sOM2DnoBc_t",
+      "cartelera": "ACCION",
+      "tiempo": "1h 25min"
+    },
+    {
+      "id": "14",
+      "titulo": "Black Panther",
+      "imagen": "https://i.pinimg.com/originals/14/a3/19/14a3190cd9be547b078b2009881536da.jpg",
+      "video": "https://youtu.be/JcIye2DaZwI?si=2jirnIDicy6CeP1i",
+      "cartelera": "ACCION",
+      "tiempo": "1h 18min"
+    },
+    {
+      "id": "15",
+      "titulo": "X-Men Apocalipsis",
+      "imagen": "https://hips.hearstapps.com/hmg-prod/images/x-men-apocalipsis-1558963086.jpg",
+      "video": "https://youtu.be/TBZjPqYty8E?si=B4yJf-tTrEURuAMm",
+      "cartelera": "ACCION",
+      "tiempo": "1h 23min"
+    },
+    {
+      "id": "16",
+      "titulo": "Replicas",
+      "imagen": "https://pics.filmaffinity.com/Raeplicas-243443952-large.jpg",
+      "video": "https://youtu.be/qC0ClXrnjvY?si=Rktwgg9fHoemu3-u",
+      "cartelera": "ACCION",
+      "tiempo": "1h 33min"
+    },
+    {
+      "id": "17",
+      "titulo": "Blue Beetle",
+      "imagen": "https://pics.filmaffinity.com/Blue_Beetle-565012477-large.jpg",
+      "video": "https://youtu.be/dAkmmZMjKNY?si=L1W6gdgjCy9tcnNI",
+      "cartelera": "CIENCIA FICCION",
+      "tiempo": "1h 29min"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+.board {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 20px;
+  font: 35px/45px Monoton, cursive;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 80px red, 0 0 30px FireBrick, 0 0 6px DarkRed;
+  color: red;
+}
+
+#error {
+  color: #fff;
+  text-shadow: 0 0 80px #ffffff, 0 0 30px #008000, 0 0 6px #0000ff;
+}
+
+/* VISTA PARA TABLETS */
+@media (min-width:768px) {
+  .board{
+    font: 50px/55px Monoton, cursive;
+  }
+}
+
+/* VISTA PARA TABLETS */
+@media (min-width:1024px) {
+  .board{
+    font: 70px/75px Monoton, cursive;
+  }
+}

@@ -1,0 +1,19 @@
+ .campotiempo-flex {
+   display: flex;
+   align-items: center;
+ }
+
+ .campotiempo-seccion {
+   flex: 1;
+   margin: 5px 0;
+ }
+
+ .campotiempo-separador {
+   margin: 12px 5px 0;
+ }
+
+ @media screen and (min-width: 768px) {
+   .campotiempo-separador {
+     margin: 20px 6px 0;
+   }
+ }

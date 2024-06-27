@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useParams } from 'react-router-dom';
-import './Mirarpeli.css'; // Importa tu archivo CSS aquí
+import './Mirarpeli.css'; 
 
 export default function Mirarpeli() {
     const videoRef = useRef(null);

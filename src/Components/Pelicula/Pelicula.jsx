@@ -1,7 +1,7 @@
 import React from 'react';
 import './Pelicula.css';
-import editar from '../Image/editar.png';
-import eliminar from '../Image/eliminar.png';
+import editar from '/Image/editar.png';
+import eliminar from '/Image/eliminar.png';
 import { FaRegClock } from "react-icons/fa";
 import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
 

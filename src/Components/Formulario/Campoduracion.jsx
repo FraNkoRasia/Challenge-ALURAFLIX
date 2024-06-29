@@ -1,20 +1,19 @@
-
 import React from 'react';
-import './Campotiempo.css'; // Importar el archivo CSS
+import './Campoduracion.css'; // Importar el archivo CSS
 
-export default function Campotiempo(props) {
+export default function Campoduracion(props) {
   const manejarCambioHoras = (e) => {
     const horas = parseInt(e.target.value, 10);
     const minutos = props.valor ? parseInt(props.valor.split('min')[0].split('h ')[1] ?? 0, 10) : 0;
     const nuevoValor = `${horas}h ${minutos}min`;
-    props.actualizarTiempo(nuevoValor);
+    props.actualizarDuracion(nuevoValor);
   };
 
   const manejarCambioMinutos = (e) => {
     const horas = props.valor ? parseInt(props.valor.split('h')[0], 10) : 0;
     const minutos = parseInt(e.target.value, 10);
     const nuevoValor = `${horas}h ${minutos}min`;
-    props.actualizarTiempo(nuevoValor);
+    props.actualizarDuracion(nuevoValor);
   };
 
   // Crear opciones para las horas (de 0 a 23)
@@ -28,19 +27,19 @@ export default function Campotiempo(props) {
   ));
 
   return (
-    <div className="campotiempo">
+    <div className="campoduracion">
       <label htmlFor="descripcion">{props.titulo}</label>
 
-      <div className="campotiempo-flex">
-        <div className="campotiempo-seccion">
-          <span className="campotiempo-texto">Horas</span>
+      <div className="campoduracion-flex">
+        <div className="campoduracion-seccion">
+          <span className="campoduracion-texto">Horas</span>
           <select value={props.valor ? props.valor.split('h')[0] ?? '0' : '0'} onChange={manejarCambioHoras}>
             {opcionesHoras}
           </select>
         </div>
-        <div className="campotiempo-separador">:</div>
-        <div className="campotiempo-seccion">
-          <span className="campotiempo-texto">Minutos</span>
+        <div className="campoduracion-separador">:</div>
+        <div className="campoduracion-seccion">
+          <span className="campoduracion-texto">Minutos</span>
           <select value={props.valor ? props.valor.split('h ')[1]?.split('min')[0] ?? '0' : '0'} onChange={manejarCambioMinutos}>
             {opcionesMinutos}
           </select>

@@ -46,7 +46,6 @@ hr {
     font-size: 14px;
     color: white;
     margin-top: 10px;
-
 }
 
 .formulario input,
@@ -67,21 +66,17 @@ select {
     margin-bottom: 5px;
 }
 
-.tiempo {
+.duracion {
     margin-top: 5px;
     text-align: center;
 }
 
 .formulario input[type="text"]:focus,
 .formulario select:focus,
-.formulario .tiempo:focus {
+.formulario .duracion:focus {
     border-color: #2271D1;
     outline: none;
 }
-/* 
-.formulario .tiempo {
-    resize: vertical;
-} */
 
 .formulario button {
     border: 1px solid white;
@@ -107,8 +102,6 @@ select {
 }
 
 @media screen and (min-width: 768px) {
-
-
     .titulo-crearTarjeta {
         font-size: 25px;
     }
@@ -172,7 +165,6 @@ select {
 
 /* VISTA TABLET */
 @media screen and (min-width: 1024px) {
-
     .formulario label {
         font-size: 20px;
     }

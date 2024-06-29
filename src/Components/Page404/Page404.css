@@ -18,14 +18,14 @@
 
 /* VISTA PARA TABLETS */
 @media (min-width:768px) {
-  .board{
+  .board {
     font: 50px/55px Monoton, cursive;
   }
 }
 
 /* VISTA PARA TABLETS */
 @media (min-width:1024px) {
-  .board{
+  .board {
     font: 70px/75px Monoton, cursive;
   }
 }

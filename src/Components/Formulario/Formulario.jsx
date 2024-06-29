@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../Formulario/Formulario.css';
 import CampoTexto from './Campotexto';
 import Listaopciones from './Listaopciones';
-import Campotiempo from './Campotiempo';
+import Campoduracion from './Campoduracion';
 import Botonguardar from './Botonguardar';
 import Botonlimpiar from './Botonlimpiar';
 
@@ -11,7 +11,11 @@ export default function Formulario({ agregarPelicula, carteleras, pelicula, edit
   const [imagen, actualizarImagen] = useState("");
   const [video, actualizarVideo] = useState("");
   const [cartelera, actualizarCartelera] = useState("");
-  const [tiempo, actualizarTiempo] = useState("");
+  const [duracion, actualizarDuracion] = useState("");
+  const [sinopsis, actualizarSinopsis] = useState("");
+  const [genero, actualizarGenero] = useState("");
+  const [director, actualizarDirector] = useState("");
+  const [actores, actualizarActores] = useState("");
 
   useEffect(() => {
     if (pelicula) {
@@ -19,7 +23,11 @@ export default function Formulario({ agregarPelicula, carteleras, pelicula, edit
       actualizarImagen(pelicula.imagen);
       actualizarVideo(pelicula.video);
       actualizarCartelera(pelicula.cartelera);
-      actualizarTiempo(pelicula.tiempo);
+      actualizarDuracion(pelicula.duracion);
+      actualizarSinopsis(pelicula.sinopsis);
+      actualizarGenero(pelicula.genero);
+      actualizarDirector(pelicula.director);
+      actualizarActores(pelicula.actores);
     }
   }, [pelicula]);
 
@@ -31,7 +39,11 @@ export default function Formulario({ agregarPelicula, carteleras, pelicula, edit
       imagen,
       video,
       cartelera,
-      tiempo
+      duracion,
+      sinopsis,
+      genero,
+      director,
+      actores
     };
 
     if (pelicula) {
@@ -42,8 +54,6 @@ export default function Formulario({ agregarPelicula, carteleras, pelicula, edit
       alert("Película agregada con éxito");
       limpiarFormulario();
     }
-    // limpiarFormulario();
-    // window.location.href = "/";
   };
 
   const limpiarFormulario = () => {
@@ -51,7 +61,11 @@ export default function Formulario({ agregarPelicula, carteleras, pelicula, edit
     actualizarImagen("");
     actualizarVideo("");
     actualizarCartelera("");
-    actualizarTiempo("");
+    actualizarDuracion("");
+    actualizarSinopsis("");
+    actualizarGenero("");
+    actualizarDirector("");
+    actualizarActores("");
   };
 
   return (
@@ -103,13 +117,48 @@ export default function Formulario({ agregarPelicula, carteleras, pelicula, edit
           />
         </div>
 
-        <div className='tiempo'>
-          <Campotiempo
-            titulo="Duracion de la Pelicula"
-            placeholder="¿De que se trata este video?"
+        <div className='horizontal-fields'>
+          <CampoTexto
+            titulo="Sinopsis"
+            placeholder="Breve descripción"
             required
-            valor={tiempo}
-            actualizarTiempo={actualizarTiempo} />
+            valor={sinopsis}
+            actualizarValor={actualizarSinopsis}
+          />
+
+          <CampoTexto
+            titulo="Género"
+            placeholder="Género del Video"
+            required
+            valor={genero}
+            actualizarValor={actualizarGenero}
+          />
+        </div>
+
+        <div className='horizontal-fields'>
+          <CampoTexto
+            titulo="Director"
+            placeholder="Nombre del Director"
+            required
+            valor={director}
+            actualizarValor={actualizarDirector}
+          />
+
+          <CampoTexto
+            titulo="Actores"
+            placeholder="Nombres de los Actores"
+            required
+            valor={actores}
+            actualizarValor={actualizarActores}
+          />
+        </div>
+
+        <div className='duracion'>
+          <Campoduracion
+            titulo="Duracion de la Pelicula"
+            required
+            valor={duracion}
+            actualizarDuracion={actualizarDuracion} />
         </div>
 
         <div className="button-container">
@@ -120,6 +169,8 @@ export default function Formulario({ agregarPelicula, carteleras, pelicula, edit
     </section>
   );
 }
+
+
 
 
 

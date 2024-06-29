@@ -1,7 +1,31 @@
 .mirarpeli-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #141414;
+    color: #ffffff;
+}
+
+.description {
+    flex: 1;
+    padding-right: 20px;
+    max-width: 100%;
+}
+
+.title {
+    margin-top: 1.5rem;
+    font-size: 1.9rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.details {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #b3b3b3;
 }
 
 .video-iframe {
@@ -10,10 +34,48 @@
     border: none;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
+    .mirarpeli-container {
+        padding: 35px;
+    }
+
+    .title {
+        margin-top: 2rem;
+        font-size: 2.2rem;
+    }
+
     .video-iframe {
         width: 100%;
-        height: 100vh;
+        height: 55vh;
         border: none;
-    }  
+    }
+
+    .details {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .mirarpeli-container {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 50px;
+    }
+
+    .title {
+        margin-top: 0;
+        font-size: 3.5rem;
+    }
+
+    .video-iframe {
+        height: 60vh;
+        max-width: 50%;
+    }
+
+    .details {
+        font-size: 20px;
+        padding: 5px 0;
+        display: flex;
+        gap: 5px;
+    }
 }

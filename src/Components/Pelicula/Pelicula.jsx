@@ -3,10 +3,10 @@ import './Pelicula.css';
 import editar from '/Image/editar.png';
 import eliminar from '/Image/eliminar.png';
 import { FaRegClock } from "react-icons/fa";
-import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
+import { Link } from 'react-router-dom';
 
 export default function Pelicula({ datos, onBorrar, onEdit }) {
-  const { id, titulo, imagen, video, tiempo } = datos;
+  const { id, titulo, imagen, duracion } = datos;
 
   const manejarBorrado = () => {
     onBorrar(id);
@@ -16,7 +16,6 @@ export default function Pelicula({ datos, onBorrar, onEdit }) {
     onEdit(datos);
   };
 
-  // Función para truncar el texto si supera una longitud máxima
   const truncarTexto = (texto, longitudMaxima) => {
     return texto.length > longitudMaxima ? texto.slice(0, longitudMaxima) + '...' : texto;
   };
@@ -29,7 +28,7 @@ export default function Pelicula({ datos, onBorrar, onEdit }) {
         </Link>
         <div className='info-peli'>
           <h4>{truncarTexto(titulo, 18)}</h4>
-          <p><FaRegClock /> {tiempo}</p>
+          <p><FaRegClock /> {duracion}</p>
         </div>
         <div className='iconos'>
           <div className='accion' onClick={manejarBorrado}>
@@ -45,4 +44,3 @@ export default function Pelicula({ datos, onBorrar, onEdit }) {
     </div>
   );
 }
-

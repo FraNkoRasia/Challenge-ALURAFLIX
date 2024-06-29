@@ -11,7 +11,7 @@ export default function Mirarpeli() {
     useEffect(() => {
         const fetchPelicula = async () => {
             try {
-                const response = await fetch(`https://my-json-server.typicode.com/FraNkoRasia/fake-json-flix/peliculas/${id}`);
+                const response = await fetch(`https://fake-api-json.vercel.app/peliculas/${id}`);
                 const data = await response.json();
                 setPelicula(data);
             } catch (error) {

@@ -26,12 +26,25 @@ export default function Mirarpeli() {
         <div className="mirarpeli-container">
             <div className="description">
                 <h1 className="title">{pelicula?.titulo}</h1>
+                <p className="details duration">
+                    <span className="label">Duración:</span>
+                    <FaRegClock />
+                    {pelicula?.duracion}
+                </p>
 
-                <p className="details">Duracion:<FaRegClock />{pelicula?.duracion}</p>
-                <p className="details">Genero: {pelicula?.genero}</p>
-                <p className="details">Director: {pelicula?.director}</p>
-                <p className="details">Actores: {pelicula?.actores}</p>
-                <p className="details">Sinopsis: {pelicula?.sinopsis}</p>
+                <p className="details">
+                    <span className="label">Género:</span> {pelicula?.genero}
+                </p>
+                <p className="details">
+                    <span className="label">Director:</span> {pelicula?.director}
+                </p>
+                <p className="details">
+                    <span className="label">Actores:</span> {pelicula?.actores}
+                </p>
+                <p className="details">
+                    <span className="label">Sinopsis:</span> {pelicula?.sinopsis}
+                </p>
+
             </div>
             {pelicula && (
                 <iframe

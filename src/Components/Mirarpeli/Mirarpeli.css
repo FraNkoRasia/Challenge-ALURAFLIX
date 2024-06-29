@@ -26,7 +26,19 @@
     font-size: 1rem;
     margin-bottom: 10px;
     color: #b3b3b3;
+    padding: 5px 0;
+    gap: 5px;
 }
+
+.duration {
+    display: flex;
+    align-items: center;
+}
+
+.label {
+    font-weight: bold;
+}
+
 
 .video-iframe {
     width: 100%;
@@ -74,8 +86,5 @@
 
     .details {
         font-size: 20px;
-        padding: 5px 0;
-        display: flex;
-        gap: 5px;
     }
 }

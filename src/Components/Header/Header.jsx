@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import '../Header/Header.css';
 import logoImage from '/Image/logo.png';
-import banner from '/Image/banner.jpg';
+import banner from '/Image/banner2.jpg';
 import { Link } from 'react-router-dom';
 import { PiUploadSimpleBold } from "react-icons/pi";
 import { FaHome } from "react-icons/fa";

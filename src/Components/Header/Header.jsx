@@ -17,7 +17,7 @@ export default function Header({ onSearch }) {
         onSearch(event.target.value);
     };
 
-    const isMiraPeliView = location.pathname.startsWith('/mirarpeli/');
+    const MirarPeliOvideo = location.pathname.startsWith('/mirarpeli/') || location.pathname === '/video';
 
     return (
         <header className='header'>
@@ -27,7 +27,7 @@ export default function Header({ onSearch }) {
                 </Link>
 
                 <ul className='ul-links'>
-                    {!isMiraPeliView && (
+                    {!MirarPeliOvideo && (
                         <li className='lupa'>
                             <div className='search-container'>
                                 <input

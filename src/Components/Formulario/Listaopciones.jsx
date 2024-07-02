@@ -11,7 +11,7 @@ export default function Listaopciones(props) {
             <label htmlFor="options">{props.titulo}</label>
             <select value={props.valor} onChange={manejarCambio} required={props.required}>
                 <option value="" disabled defaultValue="" hidden>Escoja una Categoria</option>
-                {props.carteleras.map((cartelera, index) => (
+                {props.generoPeli.map((cartelera, index) => (
                     <option key={index} value={cartelera}>{cartelera}</option>
                 ))}
             </select>

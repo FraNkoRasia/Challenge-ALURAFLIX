@@ -6,7 +6,7 @@ import Campoduracion from './Campoduracion';
 import Botonguardar from './Botonguardar';
 import Botonlimpiar from './Botonlimpiar';
 
-export default function Formulario({ agregarPelicula, carteleras, pelicula, editarPelicula }) {
+export default function Formulario({ agregarPelicula, generoPeli, pelicula, editarPelicula }) {
   const [titulo, actualizarTitulo] = useState("");
   const [imagen, actualizarImagen] = useState("");
   const [video, actualizarVideo] = useState("");
@@ -95,7 +95,7 @@ export default function Formulario({ agregarPelicula, carteleras, pelicula, edit
             required
             valor={cartelera}
             actualizarCartelera={actualizarCartelera}
-            carteleras={carteleras.map(cartelera => cartelera.titulo)}
+            generoPeli={generoPeli.map(cartelera => cartelera.titulo)}
           />
         </div>
 

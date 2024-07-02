@@ -1,15 +1,18 @@
-import React from 'react';
-import Cartelera from '../Cartelera/Cartelera'; 
 
-export default function Home({ carteleras, peliculas, borrarPelicula, handleOpenModal }) {
+import React from 'react';
+import Cartelera from '../Cartelera/Cartelera';
+import './Home.css'; // Importa el archivo CSS donde tienes los estilos
+
+export default function Home({ generoPeli, peliculas, borrarPelicula, handleOpenModal }) {
   return (
-    <section>
-      {carteleras.map((cartelera, index) => ( 
-        <Cartelera key={index} datos={cartelera} peliculas={peliculas} onBorrar={borrarPelicula} onEdit={handleOpenModal} /> 
+    <section className="home-section">
+      {generoPeli.map((cartelera, index) => (
+        <Cartelera key={index} datos={cartelera} peliculas={peliculas} onBorrar={borrarPelicula} onEdit={handleOpenModal} />
       ))}
+
+      <hr className="linea" />
+      <div className="leyenda">Fin del Contenido</div>
+      <hr className="linea" />
     </section>
   );
 }
-
-
-

@@ -99,6 +99,11 @@ select {
     justify-content: space-evenly;
     gap: 15px;
     margin-top: 5px;
+transition: transform 0.4s ease;
+}
+
+.formulario .button-container button:active {
+    transform: scale(0.95);
 }
 
 @media screen and (min-width: 768px) {

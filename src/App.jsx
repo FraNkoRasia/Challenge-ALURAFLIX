@@ -4,22 +4,31 @@ import axios from 'axios';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Formulario from './Components/Formulario/Formulario';
+import FormularioGenero from './Components/Formulario/FormularioGenero';
 import Mirarpeli from './Components/Mirarpeli/Mirarpeli';
 import Modal from './Components/Modal/Modal';
 import Page404 from './Components/Page404/Page404';
 import Footer from './Components/Footer/Footer';
 
 function App() {
-  const carteleras = [
+  const [generoPeli, setGeneroPeli] = useState([
     { titulo: "CIENCIA FICCIÓN" },
     { titulo: "ANIME" },
     { titulo: "ACCIÓN" }
-  ];
+  ]);
 
   const [peliculas, setPeliculas] = useState([]);
   const [filteredPeliculas, setFilteredPeliculas] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [currentPelicula, setCurrentPelicula] = useState(null);
+
+  const agregarGenero = (nuevoGenero) => {
+    setGeneroPeli([...generoPeli, nuevoGenero]);
+  };
+
+  const eliminarGenero = (generoAEliminar) => {
+    setGeneroPeli(generoPeli.filter(genero => genero.titulo !== generoAEliminar));
+  };
 
   const agregarPelicula = async (pelicula) => {
     try {
@@ -104,8 +113,9 @@ function App() {
     <Router>
       <Header onSearch={handleSearch} />
       <Routes>
-        <Route path="/" element={<Home carteleras={carteleras} peliculas={filteredPeliculas} setPeliculas={setPeliculas} borrarPelicula={borrarPelicula} handleOpenModal={handleOpenModal} />} />
-        <Route path="/video" element={<Formulario carteleras={carteleras} agregarPelicula={agregarPelicula} />} />
+        <Route path="/" element={<Home generoPeli={generoPeli} peliculas={filteredPeliculas} setPeliculas={setPeliculas} borrarPelicula={borrarPelicula} handleOpenModal={handleOpenModal} />} />
+        <Route path="/video" element={<Formulario generoPeli={generoPeli} agregarPelicula={agregarPelicula} />} />
+        <Route path="/genero" element={<FormularioGenero agregarGenero={agregarGenero} eliminarGenero={eliminarGenero} generoPeli={generoPeli} />} />
         <Route path="/mirarpeli/:id" element={<Mirarpeli />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
@@ -113,7 +123,7 @@ function App() {
       <Modal show={showModal} handleClose={handleCloseModal} >
         <Formulario
           agregarPelicula={agregarPelicula}
-          carteleras={carteleras}
+          generoPeli={generoPeli}
           pelicula={currentPelicula}
           editarPelicula={editarPelicula}
         />
@@ -124,8 +134,5 @@ function App() {
 }
 
 export default App;
-
-
-
 
 

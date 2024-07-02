@@ -1,0 +1,25 @@
+.home-section {
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+.linea {
+    margin: 0px 20px;
+    width: 15%;
+    border-top: 1px solid #999;
+    display: inline-block;
+}
+
+.leyenda {
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 10px;
+}
+
+@media (min-width:768px) {
+    .linea {
+        width: 25%;
+    }
+}

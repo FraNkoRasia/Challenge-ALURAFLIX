@@ -1,0 +1,35 @@
+.formulario .nuevoGenero {
+    width: 50%;
+}
+
+.formulario .nuevoGenero button {
+    margin-top: 20px;
+    transition: transform 0.4s ease;
+}
+
+.formulario .nuevoGenero button:active {
+    transform: scale(0.95);
+}
+
+.formulario .eliminarGenero {
+    width: 50%;
+}
+
+.formulario .eliminarGenero button {
+    margin-top: 20px;
+    transition: transform 0.4s ease;
+}
+
+.formulario .eliminarGenero button:active {
+    transform: scale(0.95);
+}
+
+.mensaje-exito {
+    background-color: rgba(0, 167, 0, 0.9); 
+    color: #ffffff;
+    font-weight: 700;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #040404;
+    border-radius: 5px;
+}

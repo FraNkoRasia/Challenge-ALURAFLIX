@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { PiUploadSimpleBold } from "react-icons/pi";
 import { FaHome } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
+import { RiMovie2Line } from "react-icons/ri";
 
 export default function Header({ onSearch }) {
     const location = useLocation();
@@ -17,7 +18,8 @@ export default function Header({ onSearch }) {
         onSearch(event.target.value);
     };
 
-    const MirarPeliOvideo = location.pathname.startsWith('/mirarpeli/') || location.pathname === '/video';
+    const NoMostrarBuscador = location.pathname.startsWith('/mirarpeli/') || location.pathname === '/video' || location.pathname === '/genero';
+    const NoMostrarGenero = location.pathname.startsWith('/mirarpeli/') || location.pathname === '/';
 
     return (
         <header className='header'>
@@ -27,7 +29,7 @@ export default function Header({ onSearch }) {
                 </Link>
 
                 <ul className='ul-links'>
-                    {!MirarPeliOvideo && (
+                    {!NoMostrarBuscador && (
                         <li className='lupa'>
                             <div className='search-container'>
                                 <input
@@ -53,9 +55,17 @@ export default function Header({ onSearch }) {
                             <span className="text-home">NUEVA PELICULA</span>
                         </Link>
                     </li>
+                    {!NoMostrarGenero && (
+                        <li>
+                            <Link to="/genero">
+                                <span className="icon-home" aria-hidden="true"><RiMovie2Line /></span>
+                                <span className="text-home">NUEVO GENERO</span>
+                            </Link>
+                        </li>
+                    )}
                 </ul>
             </nav>
-            {!location.pathname.startsWith('/mirarpeli/') && location.pathname !== '/video' && (
+            {!NoMostrarBuscador && (
                 <div className="baner-container">
                     <img className='baner' src={banner} alt="banner" />
                 </div>
@@ -63,5 +73,3 @@ export default function Header({ onSearch }) {
         </header>
     );
 }
-
-

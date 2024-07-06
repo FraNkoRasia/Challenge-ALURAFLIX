@@ -9,6 +9,7 @@
   text-transform: uppercase;
   text-shadow: 0 0 80px red, 0 0 30px FireBrick, 0 0 6px DarkRed;
   color: red;
+  margin: auto 0;
 }
 
 #error {

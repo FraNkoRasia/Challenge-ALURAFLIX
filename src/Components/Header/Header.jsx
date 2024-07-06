@@ -18,8 +18,8 @@ export default function Header({ onSearch }) {
         onSearch(event.target.value);
     };
 
-    const NoMostrarBuscador = location.pathname.startsWith('/mirarpeli/') || location.pathname === '/video' || location.pathname === '/genero';
-    const NoMostrarGenero = location.pathname.startsWith('/mirarpeli/') || location.pathname === '/';
+    const NoMostrarBuscador = location.pathname.startsWith('/mirarpeli/') || location.pathname === '/video' || location.pathname === '/genero' || location.pathname === '/404';
+    const NoMostrarGenero = location.pathname.startsWith('/mirarpeli/') || location.pathname === '/' || location.pathname === '/404';
 
     return (
         <header className='header'>
@@ -49,23 +49,27 @@ export default function Header({ onSearch }) {
                             <span className="text-home">HOME</span>
                         </Link>
                     </li>
-                    <li>
-                        <Link to="/video">
-                            <span className="icon-home" aria-hidden="true"><PiUploadSimpleBold /></span>
-                            <span className="text-home">NUEVA PELICULA</span>
-                        </Link>
-                    </li>
-                    {!NoMostrarGenero && (
-                        <li>
-                            <Link to="/genero">
-                                <span className="icon-home" aria-hidden="true"><RiMovie2Line /></span>
-                                <span className="text-home">NUEVO GENERO</span>
-                            </Link>
-                        </li>
+                    {location.pathname !== '/404' && (
+                        <>
+                            <li>
+                                <Link to="/video">
+                                    <span className="icon-home" aria-hidden="true"><PiUploadSimpleBold /></span>
+                                    <span className="text-home">NUEVA PELICULA</span>
+                                </Link>
+                            </li>
+                            {!NoMostrarGenero && (
+                                <li>
+                                    <Link to="/genero">
+                                        <span className="icon-home" aria-hidden="true"><RiMovie2Line /></span>
+                                        <span className="text-home">NUEVO GENERO</span>
+                                    </Link>
+                                </li>
+                            )}
+                        </>
                     )}
                 </ul>
             </nav>
-            {!NoMostrarBuscador && (
+            {!NoMostrarBuscador && location.pathname !== '/404' && (
                 <div className="baner-container">
                     <img className='baner' src={banner} alt="banner" />
                 </div>
@@ -73,3 +77,4 @@ export default function Header({ onSearch }) {
         </header>
     );
 }
+

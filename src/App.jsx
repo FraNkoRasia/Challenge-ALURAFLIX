@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import axios from 'axios';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
@@ -117,7 +117,8 @@ function App() {
         <Route path="/video" element={<Formulario generoPeli={generoPeli} agregarPelicula={agregarPelicula} />} />
         <Route path="/genero" element={<FormularioGenero agregarGenero={agregarGenero} eliminarGenero={eliminarGenero} generoPeli={generoPeli} />} />
         <Route path="/mirarpeli/:id" element={<Mirarpeli />} />
-        <Route path="*" element={<Page404 />} />
+        <Route path="/404" element={<Page404 />} />
+        <Route path="*" element={<Navigate to="/404" />} />
       </Routes>
 
       <Modal show={showModal} handleClose={handleCloseModal} >
@@ -134,5 +135,6 @@ function App() {
 }
 
 export default App;
+
 
 

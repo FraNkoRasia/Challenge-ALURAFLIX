@@ -7,8 +7,9 @@
     background-color: #000000;
     box-shadow: 0px 5px 30px 3px #2271D1B2;
     border-bottom: 2px solid #2271D1;
-    position: relative;
     z-index: 1;
+    position: fixed;
+    width: 100%;
 }
 
 .nav img {
@@ -101,6 +102,7 @@
     width: 100%;
     box-shadow: 0px 5px 30px 3px #2271D1B2;
     border-bottom: 2px solid #2271D1;
+    margin-top: 65px;
 }
 
 /* VISTA TABLET */
@@ -121,7 +123,7 @@
     }
 
     .ul-links li {
-        font-size:19.2px;
+        font-size: 19.2px;
         padding: 6px;
     }
 
@@ -136,6 +138,9 @@
     .text-home {
         display: inline;
     }
+    .baner{
+        margin-top: 80px;
+    }
 }
 
 /* VISTA DESKTOP */
@@ -145,6 +150,7 @@
     .nav {
         border-bottom: 4px solid #2271D1;
         padding: 24px;
+
     }
 
     .nav img {

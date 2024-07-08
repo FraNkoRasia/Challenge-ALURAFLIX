@@ -37,14 +37,17 @@ const Page404 = () => {
     }, []);
 
     return (
-        <div className="board">
-            <p id="error">error</p>
-            <p id="code">404</p>
-            <p id="error">PAGINA</p>
-            <p id="code"> NO ENCONTRADA</p>
+        <div className="container">
+            <div className="board">
+                <p id="error">error</p>
+                <p id="code">404</p>
+                <p id="error">PAGINA</p>
+                <p id="code"> NO ENCONTRADA</p>
+            </div>
         </div>
     );
 };
 
 export default Page404;
+
 

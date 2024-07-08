@@ -26,6 +26,7 @@ hr {
     margin-top: 8px;
     font-size: 24px;
     font-weight: 700;
+    margin-top: 80px;
 }
 
 .titulo-subtitulo p {
@@ -99,7 +100,8 @@ select {
     justify-content: space-evenly;
     gap: 15px;
     margin-top: 5px;
-transition: transform 0.4s ease;
+    transition: transform 0.4s ease;
+    margin-bottom: 20px;
 }
 
 .formulario .button-container button:active {
@@ -114,6 +116,7 @@ transition: transform 0.4s ease;
     .titulo-subtitulo h1 {
         margin-top: 32px;
         font-size: 32px;
+        margin-top: 100px;
     }
 
     .titulo-subtitulo p {
@@ -176,5 +179,9 @@ transition: transform 0.4s ease;
 
     .titulo-subtitulo p {
         font-size: 20px;
+    }
+
+    .titulo-subtitulo h1 {
+        margin-top: 130px;
     }
 }

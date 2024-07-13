@@ -18,6 +18,13 @@
     margin-top: 10px;
 }
 
+.no-results-message {
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+}
+
 @media (min-width:768px) {
     .linea {
         width: 25%;

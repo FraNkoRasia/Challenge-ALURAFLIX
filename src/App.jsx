@@ -113,7 +113,7 @@ function App() {
     <Router>
       <Header onSearch={handleSearch} />
       <Routes>
-        <Route path="/" element={<Home generoPeli={generoPeli} peliculas={filteredPeliculas} setPeliculas={setPeliculas} borrarPelicula={borrarPelicula} handleOpenModal={handleOpenModal} />} />
+        <Route path="/" element={<Home generoPeli={generoPeli} peliculas={filteredPeliculas} borrarPelicula={borrarPelicula} handleOpenModal={handleOpenModal} />} />
         <Route path="/video" element={<Formulario generoPeli={generoPeli} agregarPelicula={agregarPelicula} />} />
         <Route path="/genero" element={<FormularioGenero agregarGenero={agregarGenero} eliminarGenero={eliminarGenero} generoPeli={generoPeli} />} />
         <Route path="/mirarpeli/:id" element={<Mirarpeli />} />
@@ -135,6 +135,7 @@ function App() {
 }
 
 export default App;
+
 
 
 

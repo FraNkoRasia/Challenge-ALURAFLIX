@@ -8,10 +8,10 @@ export default function Cartelera({ datos, peliculas, onBorrar, onEdit }) {
 
   return (
     <div>
-      <div className='cartelera'>
-        <h3 className='titulo-genero'>{titulo}</h3>
-      </div>
       <div className='peliculas-container'>
+        <div className='cartelera'>
+          <h3 className='titulo-genero'>{titulo}</h3>
+        </div>
         <div className='peli'>
           {peliculasFiltradas.map((pelicula, index) => (
             <Pelicula

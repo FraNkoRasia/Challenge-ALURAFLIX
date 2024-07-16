@@ -63,7 +63,7 @@
     }
 }
 
-/* VISTA PARA TABLETS */
+/* VISTA PARA DESKTOP */
 @media (min-width:1024px) {
     .titulo-genero {
         font-size: 30px;

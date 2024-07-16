@@ -1,8 +1,12 @@
 import React from 'react';
 import Cartelera from '../Cartelera/Cartelera';
-import './Home.css'; // Importa el archivo CSS donde tienes los estilos
+import './Home.css';
 
 export default function Home({ generoPeli, peliculas, borrarPelicula, handleOpenModal }) {
+  const generosConPeliculas = generoPeli.filter(genero =>
+    peliculas.some(pelicula => pelicula.cartelera === genero.titulo)
+  );
+
   return (
     <section className="home-section">
       {peliculas.length === 0 ? (
@@ -11,7 +15,7 @@ export default function Home({ generoPeli, peliculas, borrarPelicula, handleOpen
         </div>
       ) : (
         <>
-          {generoPeli.map((cartelera, index) => (
+          {generosConPeliculas.map((cartelera, index) => (
             <Cartelera key={index} datos={cartelera} peliculas={peliculas} onBorrar={borrarPelicula} onEdit={handleOpenModal} />
           ))}
         </>

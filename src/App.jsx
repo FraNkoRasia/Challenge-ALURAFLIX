@@ -21,7 +21,8 @@ function App() {
   const [filteredPeliculas, setFilteredPeliculas] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [currentPelicula, setCurrentPelicula] = useState(null);
-
+  const API_URL = 'https://fake-api-json.vercel.app/peliculas';
+  
   const agregarGenero = (nuevoGenero) => {
     setGeneroPeli([...generoPeli, nuevoGenero]);
   };
@@ -32,7 +33,7 @@ function App() {
 
   const agregarPelicula = async (pelicula) => {
     try {
-      const response = await axios.get('https://fake-api-json.vercel.app/peliculas');
+      const response = await axios.get(API_URL);
       const peliculasActuales = response.data;
 
       const ultimoId = peliculasActuales.reduce((maxId, pelicula) => {
@@ -41,7 +42,7 @@ function App() {
 
       pelicula.id = (ultimoId + 1).toString();
 
-      await axios.post('https://fake-api-json.vercel.app/peliculas', pelicula);
+      await axios.post(API_URL, pelicula);
 
       setPeliculas([...peliculas, pelicula]);
       setFilteredPeliculas([...peliculas, pelicula]);
@@ -52,7 +53,7 @@ function App() {
 
   const borrarPelicula = async (id) => {
     try {
-      await axios.delete(`https://fake-api-json.vercel.app/peliculas/${id}`);
+      await axios.delete(`${API_URL}/${id}`);
       const updatedPeliculas = peliculas.filter(pel => pel.id !== id);
       setPeliculas(updatedPeliculas);
       setFilteredPeliculas(updatedPeliculas);
@@ -63,7 +64,7 @@ function App() {
 
   const editarPelicula = async (pelicula) => {
     try {
-      const response = await axios.put(`https://fake-api-json.vercel.app/peliculas/${pelicula.id}`, pelicula);
+      const response = await axios.put(`${API_URL}/${pelicula.id}`, pelicula);
       const updatedPeliculas = peliculas.map(pel => pel.id === pelicula.id ? response.data : pel);
       setPeliculas(updatedPeliculas);
       setFilteredPeliculas(updatedPeliculas);
@@ -98,7 +99,7 @@ function App() {
   useEffect(() => {
     const fetchPeliculas = async () => {
       try {
-        const response = await axios.get('https://fake-api-json.vercel.app/peliculas');
+        const response = await axios.get(API_URL);
         setPeliculas(response.data);
         setFilteredPeliculas(response.data);
       } catch (error) {
